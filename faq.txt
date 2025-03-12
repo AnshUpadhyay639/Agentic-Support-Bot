@@ -43,3 +43,64 @@ To request a repair, log in to your account, go to "Support" > "Request Repair,"
 
 Is there an extended warranty available?
 Yes, we offer TechCare+ extended warranty plans that provide coverage for up to three years, including accidental damage protection. You can purchase TechCare+ when buying your product or within 30 days of purchase. 
+
+How can I place orders?
+There are two ways to place orders for our services:
+By using the Self-Service Marketplace (only for text creation and surveys)
+or by placing an individual order and personal contact (managed service) to our sales team
+
+Which method of ordering is best for me?
+In the areas of standardized text creation (with and without keywords) and survey tasks, it is more advantageous and favorable for you to enter the order using the Self-Service Marketplace.
+If you have large, individual projects from any service areas offered, please contact our sales team. They will provide personal advice and discuss the project with you.
+
+What is the order procedure?
+We determine the project specifications together with you.
+We develop a concept tailored to the individual needs of your project.
+We divide the project into individual, self-contained microjobs and put them on our job platform.
+The jobs are shown to, and quickly processed by the respectively qualified workers from our large network of Clickworkers.
+The results are subject to a quality control. Texts are also automatically checked for plagiarisms (by copyscape) and the specified keyword density.
+You will be sent the faultless results for approval.
+Contact our sales team for personal consultation and project discussion.
+
+What preliminary information is needed for an offer?
+Depending on the service requested we will need the following specifications:
+
+AI Datasets for Machine Learning
+Type of training data, number, regions/countries, formats, quality requirements.
+
+Text creation
+Text length, text language, number of texts, quality requirements
+
+SEO content services
+Text length, text language, number of keywords per text, keyword density, number of texts, quality requirements
+
+Surveys
+Topic of the survey, length of the survey, target group, number of required returns
+
+Internet research
+Type of information to be researched, amount of information/ data sets to be researched or lists of topics or URLs to complete
+
+Categorization
+Type of data to be categorized, information regarding the allocation criteria, categories requested, quality requirements
+
+Tagging
+Type of files to be tagged, keywords, and number of keywords per file
+
+Product Data Management
+Language of the data which have to be extracted/digitized, type of data, form of data, number of the data which have to be extracted/digitized
+
+What does an order cost?
+The costs are calculated according to the amount of time involved and the quality requirements. These vary from project to project. Therefore, per project, you will receive an individual offer on demand.
+
+How and when do I receive the invoices?
+Invoices are issued at the end of the month for the results rendered until then, and will be sent to you by mail or email.
+
+How is quality ensured?
+For each task we select corresponding Clickworkers according to their individual skills. These skills have been verified through trainings and tests. Furthermore, their skills are continuously subjected to evaluation based on the work results. In addition, the high quality of the work results are secured by special quality management measures such as statistic process control, audits, peer reviews and evaluation.
+
+How do I receive the results?
+The results are delivered to you by email, or loaded directly into your system/ application via API connection.
+Optionally, you will get access to an AWS server where we will upload your results and where you can access the results.
+
+How great is the risk that the results do not meet my expectations?
+We discuss the outcome requirements as accurately as possible in advance. Furthermore, when we are dealing with large orders, we agree on a test order to ensure correct and faultless processing.
