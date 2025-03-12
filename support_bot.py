@@ -71,14 +71,11 @@ class SupportBotAgent:
         logging.info("Initializing SupportBotAgent")
         print(f"{Fore.CYAN}Initializing support bot...{Style.RESET_ALL}")
         
-        # Load NLP models
-        self.qa_model = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
-        self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        
-        # Load and process document
+        self.document_path = document_path
         self.document_text = DocumentProcessor.load_document(document_path)
-        self.sections = self._split_into_sections(self.document_text)
-        self.section_embeddings = self.embedder.encode(self.sections, convert_to_tensor=True)
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.qa_pipeline = pipeline('question-answering', model='distilbert-base-uncased')
+        self.corpus_embeddings = self.embedding_model.encode(self._split_into_sections(self.document_text), convert_to_tensor=True)
         
         # Initialize feedback simulator
         self.feedback_simulator = FeedbackSimulator()
@@ -100,8 +97,8 @@ class SupportBotAgent:
             "partially correct": self._improve_partial_response
         }
         
-        logging.info(f"Loaded document with {len(self.sections)} sections")
-        print(f"{Fore.GREEN}Support bot initialized successfully with {len(self.sections)} document sections{Style.RESET_ALL}")
+        logging.info(f"Loaded document with {len(self.corpus_embeddings)} sections")
+        print(f"{Fore.GREEN}Support bot initialized successfully with {len(self.corpus_embeddings)} document sections{Style.RESET_ALL}")
     
     def _split_into_sections(self, text: str) -> List[str]:
         """Split document into meaningful sections for retrieval."""
@@ -122,65 +119,25 @@ class SupportBotAgent:
     
     def find_relevant_sections(self, query: str, top_k: int = 3) -> List[Tuple[str, float]]:
         """Find the most relevant sections for a given query."""
-        query_embedding = self.embedder.encode(query, convert_to_tensor=True)
-        
-        # Calculate cosine similarities
-        similarities = util.cos_sim(query_embedding, self.section_embeddings)[0]
-        
-        # Get top-k sections
-        top_indices = torch.topk(similarities, min(top_k, len(similarities))).indices.tolist()
-        
-        # Return sections with their similarity scores
-        relevant_sections = [(self.sections[idx], similarities[idx].item()) for idx in top_indices]
-        
-        logging.info(f"Found {len(relevant_sections)} relevant sections for query: {query}")
-        return relevant_sections
+        query_embedding = self.embedding_model.encode(query, convert_to_tensor=True)
+        hits = util.semantic_search(query_embedding, self.corpus_embeddings, top_k=top_k)
+        return [(self._split_into_sections(self.document_text)[hit['corpus_id']], hit['score']) for hit in hits[0]]
     
     def answer_query(self, query: str) -> Dict:
         """Generate an answer for the given query."""
-        # Find relevant sections
         relevant_sections = self.find_relevant_sections(query)
+        best_section = relevant_sections[0][0] if relevant_sections else ""
+        result = self.qa_pipeline(question=query, context=best_section)
         
-        if not relevant_sections:
-            logging.warning(f"No relevant sections found for query: {query}")
-            return {
-                "answer": "I don't have enough information to answer that question.",
-                "confidence": 0.0,
-                "context": "",
-                "reasoning": "No relevant information found in the document."
-            }
+        # Ensure 'reasoning' is included in the response
+        response = {
+            "answer": result.get("answer", "No answer found."),
+            "confidence": result.get("score", 0.0),
+            "context": best_section,
+            "reasoning": "Generated using the most relevant section."
+        }
         
-        # Combine top sections into context (with reasonable length limit)
-        context = " ".join([section for section, _ in relevant_sections])
-        
-        # Use the QA model to extract the answer
-        try:
-            result = self.qa_model(question=query, context=context)
-            confidence = result["score"]
-            
-            # Log the decision-making process
-            reasoning = f"Found answer with confidence {confidence:.2f}. "
-            if confidence < self.confidence_threshold:
-                reasoning += "Low confidence in this answer."
-            else:
-                reasoning += "High confidence in this answer."
-            
-            logging.info(f"Generated answer for query with confidence {confidence:.2f}")
-            
-            return {
-                "answer": result["answer"],
-                "confidence": confidence,
-                "context": context,
-                "reasoning": reasoning
-            }
-        except Exception as e:
-            logging.error(f"Error generating answer: {e}")
-            return {
-                "answer": "I encountered an error while trying to answer your question.",
-                "confidence": 0.0,
-                "context": context,
-                "reasoning": f"Error: {str(e)}"
-            }
+        return response
     
     def get_feedback(self, query: str, response: Dict) -> Dict:
         """
@@ -239,7 +196,7 @@ class SupportBotAgent:
             
             # Generate a new answer with this specific context
             try:
-                result = self.qa_model(question=query, context=best_section)
+                result = self.qa_pipeline(question=query, context=best_section)
                 
                 new_response = {
                     "answer": result["answer"],
@@ -269,7 +226,7 @@ class SupportBotAgent:
             
             # Generate a supplementary answer
             try:
-                supplementary_result = self.qa_model(question=query, context=additional_info)
+                supplementary_result = self.qa_pipeline(question=query, context=additional_info)
                 supplementary_answer = supplementary_result["answer"]
                 
                 # Combine the original and supplementary answers

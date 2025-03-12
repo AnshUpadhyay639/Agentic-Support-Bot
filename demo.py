@@ -100,7 +100,7 @@ def demo_mode(bot):
     print_section("Demo Mode")
     
     demo_queries = [
-        "How do I reset my password?",
+        "What is this World?",
         "What's the refund policy?",
         "How do I track my order?",
         "Do you offer international shipping?",
