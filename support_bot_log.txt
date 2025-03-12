@@ -1,0 +1,95 @@
+2025-03-12 00:24:12,535 - INFO - Initializing SupportBotAgent
+2025-03-12 00:24:27,443 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-12 00:25:03,570 - INFO - Use pytorch device: cpu
+2025-03-12 00:25:03,570 - INFO - Loading document from faq.txt
+2025-03-12 00:25:04,147 - INFO - Initialized FeedbackSimulator
+2025-03-12 00:25:04,147 - INFO - Loaded document with 17 sections
+2025-03-12 00:25:04,147 - INFO - Processing query: How do I reset my password?
+2025-03-12 00:25:04,210 - INFO - Found 3 relevant sections for query: How do I reset my password?
+2025-03-12 00:25:04,486 - INFO - Generated answer for query with confidence 0.14
+2025-03-12 00:25:04,499 - INFO - Generated feedback: good (confidence: 0.20)
+2025-03-12 00:25:04,499 - INFO - Feedback received: good
+2025-03-12 00:25:04,499 - INFO - Suggestions: []
+2025-03-12 00:25:04,499 - INFO - Query completed after 1 iterations with final feedback: good
+2025-03-12 00:25:04,499 - INFO - Processing query: What's the refund policy?
+2025-03-12 00:25:04,571 - INFO - Found 3 relevant sections for query: What's the refund policy?
+2025-03-12 00:25:04,824 - INFO - Generated answer for query with confidence 0.22
+2025-03-12 00:25:04,839 - INFO - Generated feedback: not helpful (confidence: 0.27)
+2025-03-12 00:25:04,839 - INFO - Feedback received: not helpful
+2025-03-12 00:25:04,839 - INFO - Suggestions: ['Offer alternative solutions if applicable', 'Provide actionable information']
+2025-03-12 00:25:04,839 - INFO - Adjusting response based on feedback: not helpful
+2025-03-12 00:25:04,902 - INFO - Found 3 relevant sections for query: What's the refund policy? Please provide specific steps and details.
+2025-03-12 00:25:05,153 - INFO - Generated answer for query with confidence 0.08
+2025-03-12 00:25:05,664 - INFO - Generated feedback: too vague (confidence: 0.36)
+2025-03-12 00:25:05,664 - INFO - Feedback received: too vague
+2025-03-12 00:25:05,664 - INFO - Suggestions: ['Include step-by-step instructions', "Avoid tentative language like 'might' or 'could'"]
+2025-03-12 00:25:05,664 - INFO - Adjusting response based on feedback: too vague
+2025-03-12 00:25:05,719 - INFO - Found 2 relevant sections for query: What's the refund policy?
+2025-03-12 00:25:06,236 - INFO - Generated feedback: not helpful (confidence: 0.45)
+2025-03-12 00:25:06,236 - INFO - Feedback received: not helpful
+2025-03-12 00:25:06,236 - INFO - Suggestions: ['Offer alternative solutions if applicable', 'Provide actionable information']
+2025-03-12 00:25:06,238 - INFO - Adjusting response based on feedback: not helpful
+2025-03-12 00:25:06,316 - INFO - Found 3 relevant sections for query: What's the refund policy? Please provide specific steps and details.
+2025-03-12 00:25:06,583 - INFO - Generated answer for query with confidence 0.08
+2025-03-12 00:25:07,088 - INFO - Query completed after 3 iterations with final feedback: not helpful
+2025-03-12 00:25:07,088 - INFO - Processing query: How do I track my order?
+2025-03-12 00:25:07,149 - INFO - Found 3 relevant sections for query: How do I track my order?
+2025-03-12 00:25:07,354 - INFO - Generated answer for query with confidence 0.24
+2025-03-12 00:25:07,354 - INFO - Generated feedback: incorrect (confidence: 0.18)
+2025-03-12 00:25:07,354 - INFO - Feedback received: incorrect
+2025-03-12 00:25:07,354 - INFO - Suggestions: ['Verify information against the documentation', 'Ensure the answer is up-to-date']
+2025-03-12 00:25:07,354 - INFO - Adjusting response based on feedback: incorrect
+2025-03-12 00:25:07,432 - INFO - Found 5 relevant sections for query: How do I track my order?
+2025-03-12 00:25:08,104 - INFO - Generated feedback: not helpful (confidence: 0.27)
+2025-03-12 00:25:08,104 - INFO - Feedback received: not helpful
+2025-03-12 00:25:08,104 - INFO - Suggestions: ["Focus on solving the user's specific problem", 'Provide actionable information']
+2025-03-12 00:25:08,104 - INFO - Adjusting response based on feedback: not helpful
+2025-03-12 00:25:08,186 - INFO - Found 3 relevant sections for query: How do I track my order? Please provide specific steps and details.
+2025-03-12 00:25:08,396 - INFO - Generated answer for query with confidence 0.14
+2025-03-12 00:25:08,905 - INFO - Generated feedback: too vague (confidence: 0.36)
+2025-03-12 00:25:08,905 - INFO - Feedback received: too vague
+2025-03-12 00:25:08,905 - INFO - Suggestions: ['Add more specific details', "Avoid tentative language like 'might' or 'could'"]
+2025-03-12 00:25:08,905 - INFO - Adjusting response based on feedback: too vague
+2025-03-12 00:25:08,971 - INFO - Found 2 relevant sections for query: How do I track my order?
+2025-03-12 00:25:09,483 - INFO - Query completed after 3 iterations with final feedback: too vague
+2025-03-12 00:25:09,483 - INFO - Processing query: Do you offer international shipping?
+2025-03-12 00:25:09,554 - INFO - Found 3 relevant sections for query: Do you offer international shipping?
+2025-03-12 00:25:09,774 - INFO - Generated answer for query with confidence 0.22
+2025-03-12 00:25:09,774 - INFO - Generated feedback: good (confidence: 0.09)
+2025-03-12 00:25:09,774 - INFO - Feedback received: good
+2025-03-12 00:25:09,774 - INFO - Suggestions: []
+2025-03-12 00:25:09,774 - INFO - Query completed after 1 iterations with final feedback: good
+2025-03-12 00:25:09,774 - INFO - Processing query: How do I update my device software?
+2025-03-12 00:25:09,852 - INFO - Found 3 relevant sections for query: How do I update my device software?
+2025-03-12 00:25:10,104 - INFO - Generated answer for query with confidence 0.03
+2025-03-12 00:25:10,104 - INFO - Generated feedback: incorrect (confidence: 0.20)
+2025-03-12 00:25:10,104 - INFO - Feedback received: incorrect
+2025-03-12 00:25:10,104 - INFO - Suggestions: ['Double-check technical details', "Make sure you're addressing the right question"]
+2025-03-12 00:25:10,104 - INFO - Adjusting response based on feedback: incorrect
+2025-03-12 00:25:10,167 - INFO - Found 5 relevant sections for query: How do I update my device software?
+2025-03-12 00:25:10,826 - INFO - Generated feedback: too vague (confidence: 0.36)
+2025-03-12 00:25:10,826 - INFO - Feedback received: too vague
+2025-03-12 00:25:10,826 - INFO - Suggestions: ['Be more assertive in your response', 'Add more specific details']
+2025-03-12 00:25:10,826 - INFO - Adjusting response based on feedback: too vague
+2025-03-12 00:25:10,904 - INFO - Found 2 relevant sections for query: How do I update my device software?
+2025-03-12 00:25:11,407 - INFO - Generated feedback: incorrect (confidence: 0.18)
+2025-03-12 00:25:11,407 - INFO - Feedback received: incorrect
+2025-03-12 00:25:11,407 - INFO - Suggestions: ['Ensure the answer is up-to-date', "Make sure you're addressing the right question"]
+2025-03-12 00:25:11,407 - INFO - Adjusting response based on feedback: incorrect
+2025-03-12 00:25:11,472 - INFO - Found 5 relevant sections for query: How do I update my device software?
+2025-03-12 00:25:12,123 - INFO - Query completed after 3 iterations with final feedback: incorrect
+2025-03-12 00:25:12,123 - INFO - Processing query: What happens if my device breaks after warranty?
+2025-03-12 00:25:12,194 - INFO - Found 3 relevant sections for query: What happens if my device breaks after warranty?
+2025-03-12 00:25:12,407 - INFO - Generated answer for query with confidence 0.73
+2025-03-12 00:25:12,407 - INFO - Generated feedback: too vague (confidence: 0.36)
+2025-03-12 00:25:12,407 - INFO - Feedback received: too vague
+2025-03-12 00:25:12,407 - INFO - Suggestions: ['Add more specific details', 'Include step-by-step instructions']
+2025-03-12 00:25:12,407 - INFO - Adjusting response based on feedback: too vague
+2025-03-12 00:25:12,477 - INFO - Found 2 relevant sections for query: What happens if my device breaks after warranty?
+2025-03-12 00:25:12,989 - INFO - Generated feedback: good (confidence: 0.40)
+2025-03-12 00:25:12,989 - INFO - Feedback received: good
+2025-03-12 00:25:12,989 - INFO - Suggestions: []
+2025-03-12 00:25:12,989 - INFO - Query completed after 2 iterations with final feedback: good
+2025-03-12 00:25:12,989 - INFO - Most common feedback: good (3 times)
+2025-03-12 00:25:12,989 - INFO - Learning from feedback: success rate 0.50, adjusted threshold to 0.70
+2025-03-12 00:25:12,989 - INFO - Session completed. Feedback stats: {'good': 3, 'not helpful': 3, 'too vague': 4, 'incorrect': 3, 'partially correct': 0}

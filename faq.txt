@@ -1,0 +1,45 @@
+# TechGadgets Inc. - Customer Support FAQ
+
+## Account Management
+
+How do I create an account?
+To create an account, visit our website at www.techgadgets.com and click on the "Sign Up" button in the top right corner. Fill in your email address, create a password, and follow the verification steps sent to your email.
+
+How do I reset my password?
+If you've forgotten your password, click on the "Forgot Password" link on the login page. Enter your email address, and we'll send you a password reset link. Follow the instructions in the email to create a new password.
+
+How do I update my profile information?
+Log in to your account, click on your profile icon in the top right corner, and select "Account Settings." From there, you can update your personal information, change your password, and manage your notification preferences.
+
+## Orders and Shipping
+
+What is your shipping policy?
+We offer free standard shipping on all orders over $50. Standard shipping typically takes 3-5 business days. Express shipping is available for an additional fee and delivers within 1-2 business days.
+
+How can I track my order?
+Once your order ships, you'll receive a confirmation email with a tracking number. You can also view your order status by logging into your account and visiting the "Order History" section.
+
+What's the refund policy?
+We offer a 30-day money-back guarantee on all products. If you're not satisfied with your purchase, you can return it within 30 days for a full refund. The product must be in its original packaging and in resellable condition.
+
+## Product Support
+
+How do I set up my new device?
+Each device comes with a quick start guide in the box. For detailed instructions, visit our support website at support.techgadgets.com and search for your specific product model.
+
+My device isn't working properly. What should I do?
+First, try restarting your device. If the issue persists, check our troubleshooting guides at support.techgadgets.com. If you still need help, contact our customer support team at support@techgadgets.com or call 1-800-TECH-HELP.
+
+How do I update the software on my device?
+Most of our devices update automatically when connected to Wi-Fi. To manually check for updates, go to Settings > System > Software Update on your device.
+
+## Warranty and Repairs
+
+What is covered under warranty?
+Our standard warranty covers manufacturing defects and hardware failures for one year from the date of purchase. It does not cover damage from accidents, misuse, or unauthorized modifications.
+
+How do I request a repair?
+To request a repair, log in to your account, go to "Support" > "Request Repair," and follow the instructions. You'll need to provide your order number and a description of the issue.
+
+Is there an extended warranty available?
+Yes, we offer TechCare+ extended warranty plans that provide coverage for up to three years, including accidental damage protection. You can purchase TechCare+ when buying your product or within 30 days of purchase. 
